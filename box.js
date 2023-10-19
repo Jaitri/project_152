@@ -1,7 +1,8 @@
 AFRAME.registerComponent("move-box",{
     schema:{
         moveY:{ type:"number", default:1},
-        rotY:{type:"number", default:45}
+        rotY:{type:"number", default:45},
+        clickCounter:{type:"number", default:1}
     },
     tick: function(){
         window.addEventListener("click", e=> {
@@ -16,4 +17,4 @@ AFRAME.registerComponent("move-box",{
                 const rotation = {x:0, y:100, z:0};
             }
         }
-};
+});
